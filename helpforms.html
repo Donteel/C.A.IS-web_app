@@ -4,6 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <select id="cities">
+        <option value="Иерусалим">Иерусалим</option>
+        <option value="Тель-Авив">Тель-Авив</option>
+        <option value="Хайфа">Хайфа</option>
+        <option value="Беэр-Шева">Беэр-Шева</option>
+        <option value="Нетания">Нетания</option>
+        <option value="Ашдод">Ашдод</option>
+        <option value="Ашкелон">Ашкелон</option>
+        <option value="Эйлат">Эйлат</option>
+        <option value="Ришон-ле-Цион">Ришон-ле-Цион</option>
+        <option value="Петах-Тиква">Петах-Тиква</option>
+        <option value="Бат-Ям">Бат-Ям</option>
+        <option value="Холон">Холон</option>
+        <option value="Кфар-Саба">Кфар-Саба</option>
+        <option value="Рамат-Ган">Рамат-Ган</option>
+        <option value="Реховот">Реховот</option>
+        <option value="Модин-Маккабим-Реут">Модин-Маккабим-Реут</option>
+        <option value="Герцлия">Герцлия</option>
+        <option value="Хадера">Хадера</option>
+        <option value="Гиватаим">Гиватаим</option>
+        <option value="Рамла">Рамла</option>
+        <option value="Лод">Лод</option>
+        <option value="Тверия">Тверия</option>
+        <option value="Акко">Акко</option>
+        <option value="Нацрат">Нацрат</option>
+        <option value="Кирьят-Шмона">Кирьят-Шмона</option>
+        <option value="Сдерот">Сдерот</option>
+        <option value="Арад">Арад</option>
+        <option value="Йокнеам">Йокнеам</option>
+        <option value="Мигдаль ха-Эмек">Мигдаль ха-Эмек</option>
+        <option value="Кармель">Кармель</option>
+        <option value="Димона">Димона</option>
+        <option value="Мицпе-Рамон">Мицпе-Рамон</option>
+        <option value="Маале-Адумим">Маале-Адумим</option>
+        <option value="Кирьят-Гат">Кирьят-Гат</option>
+        <option value="Кирьят-Ата">Кирьят-Ата</option>
+        <option value="Кирьят-Моцкин">Кирьят-Моцкин</option>
+        <option value="Кирьят-Бялик">Кирьят-Бялик</option>
+        <option value="Ор-Йегуда">Ор-Йегуда</option>
+        <option value="Йехуд-Моноссон">Йехуд-Моноссон</option>
+        <option value="Гиват-Шмуэль">Гиват-Шмуэль</option>
+        <option value="Нагария">Нагария</option>
+        <option value="Зихрон-Яаков">Зихрон-Яаков</option>
+        <option value="Кацрин">Кацрин</option>
+        <option value="Цфат">Цфат</option>
+        <option value="Бней-Брак">Бней-Брак</option>
+        <option value="Тайбе">Тайбе</option>
+        <option value="Тамра">Тамра</option>
+        <option value="Калькилия">Калькилия</option>
+        <option value="Умм-эль-Фахм">Умм-эль-Фахм</option>
+        <option value="Сакинин">Сакинин</option>
+        <option value="Кфар-Хабад">Кфар-Хабад</option>
+        <option value="Кфар-Йона">Кфар-Йона</option>
+        <option value="Кфар-Ясиф">Кфар-Ясиф</option>
+        <option value="Кфар-Виткин">Кфар-Виткин</option>
+        <option value="Махане-Иехуда">Махане-Иехуда</option>
+        <option value="Меон-Голан">Меон-Голан</option>
+        <option value="Маале-Ирони">Маале-Ирони</option>
+        <option value="Нешер">Нешер</option>
+        <option value="Офаксим">Офаксим</option>
+        <option value="Пардес-Хана-Каркур">Пардес-Хана-Каркур</option>
+        <option value="Шохам">Шохам</option>
+        <option value="Тель-Монд">Тель-Монд</option>
+        <option value="Тира">Тира</option>
+        <option value="Явне">Явне</option>
+        <option value="Ярка">Ярка</option>
+        <option value="Цур-Ицхак">Цур-Ицхак</option>
+        <option value="Эльад">Эльад</option>
+        <option value="Кацир">Кацир</option>
+        <option value="Кафр-Касем">Кафр-Касем</option>
+        <option value="Северная Кармель">Северная Кармель</option>
+        <option value="Кафр-Манда">Кафр-Манда</option>
+        <option value="Кфар-Кама">Кфар-Кама</option>
+
+      </select>
+      
+      <script>
+        function sortSelectOptions(selectId) {
+          var select = document.getElementById(selectId);
+          var options = Array.from(select.options);
+          options.sort((a, b) => a.text.localeCompare(b.text));
+          
+          select.innerHTML = '';
+          options.forEach(option => select.add(option));
+        }
+      
+        sortSelectOptions('cities');
+      </script>
     <title>Форма поддержки</title>
   </head>
   <body>
@@ -16,16 +104,79 @@
         <label for="city">Город проживания</label>
         <select id="city" name="city" required>
           <option value="">Выберите город</option>
-          <option value="Тель-Авив">Тель-Авив</option>
           <option value="Иерусалим">Иерусалим</option>
+          <option value="Тель-Авив">Тель-Авив</option>
           <option value="Хайфа">Хайфа</option>
+          <option value="Беэр-Шева">Беэр-Шева</option>
+          <option value="Нетания">Нетания</option>
+          <option value="Ашдод">Ашдод</option>
+          <option value="Ашкелон">Ашкелон</option>
+          <option value="Эйлат">Эйлат</option>
           <option value="Ришон-ле-Цион">Ришон-ле-Цион</option>
           <option value="Петах-Тиква">Петах-Тиква</option>
-          <option value="Нетания">Нетания</option>
-          <option value="Беэр-Шева">Беэр-Шева</option>
-          <option value="Ашдод">Ашдод</option>
+          <option value="Бат-Ям">Бат-Ям</option>
           <option value="Холон">Холон</option>
+          <option value="Кфар-Саба">Кфар-Саба</option>
+          <option value="Рамат-Ган">Рамат-Ган</option>
+          <option value="Реховот">Реховот</option>
+          <option value="Модин-Маккабим-Реут">Модин-Маккабим-Реут</option>
+          <option value="Герцлия">Герцлия</option>
+          <option value="Хадера">Хадера</option>
+          <option value="Гиватаим">Гиватаим</option>
+          <option value="Рамла">Рамла</option>
+          <option value="Лод">Лод</option>
+          <option value="Тверия">Тверия</option>
+          <option value="Акко">Акко</option>
+          <option value="Нацрат">Нацрат</option>
+          <option value="Кирьят-Шмона">Кирьят-Шмона</option>
+          <option value="Сдерот">Сдерот</option>
+          <option value="Арад">Арад</option>
+          <option value="Йокнеам">Йокнеам</option>
+          <option value="Мигдаль ха-Эмек">Мигдаль ха-Эмек</option>
+          <option value="Кармель">Кармель</option>
+          <option value="Димона">Димона</option>
+          <option value="Мицпе-Рамон">Мицпе-Рамон</option>
+          <option value="Маале-Адумим">Маале-Адумим</option>
+          <option value="Кирьят-Гат">Кирьят-Гат</option>
+          <option value="Кирьят-Ата">Кирьят-Ата</option>
+          <option value="Кирьят-Моцкин">Кирьят-Моцкин</option>
+          <option value="Кирьят-Бялик">Кирьят-Бялик</option>
+          <option value="Ор-Йегуда">Ор-Йегуда</option>
+          <option value="Йехуд-Моноссон">Йехуд-Моноссон</option>
+          <option value="Гиват-Шмуэль">Гиват-Шмуэль</option>
+          <option value="Нагария">Нагария</option>
+          <option value="Зихрон-Яаков">Зихрон-Яаков</option>
+          <option value="Кацрин">Кацрин</option>
+          <option value="Цфат">Цфат</option>
           <option value="Бней-Брак">Бней-Брак</option>
+          <option value="Тайбе">Тайбе</option>
+          <option value="Тамра">Тамра</option>
+          <option value="Калькилия">Калькилия</option>
+          <option value="Умм-эль-Фахм">Умм-эль-Фахм</option>
+          <option value="Сакинин">Сакинин</option>
+          <option value="Кфар-Хабад">Кфар-Хабад</option>
+          <option value="Кфар-Йона">Кфар-Йона</option>
+          <option value="Кфар-Ясиф">Кфар-Ясиф</option>
+          <option value="Кфар-Виткин">Кфар-Виткин</option>
+          <option value="Махане-Иехуда">Махане-Иехуда</option>
+          <option value="Меон-Голан">Меон-Голан</option>
+          <option value="Маале-Ирони">Маале-Ирони</option>
+          <option value="Нешер">Нешер</option>
+          <option value="Офаксим">Офаксим</option>
+          <option value="Пардес-Хана-Каркур">Пардес-Хана-Каркур</option>
+          <option value="Шохам">Шохам</option>
+          <option value="Тель-Монд">Тель-Монд</option>
+          <option value="Тира">Тира</option>
+          <option value="Явне">Явне</option>
+          <option value="Ярка">Ярка</option>
+          <option value="Цур-Ицхак">Цур-Ицхак</option>
+          <option value="Эльад">Эльад</option>
+          <option value="Кацир">Кацир</option>
+          <option value="Кафр-Касем">Кафр-Касем</option>
+          <option value="Северная Кармель">Северная Кармель</option>
+          <option value="Кафр-Манда">Кафр-Манда</option>
+          <option value="Кфар-Кама">Кфар-Кама</option>
+
         </select>
 
         <label for="message">Текст обращения</label>
