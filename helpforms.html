@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Форма поддержки</title>
+  </head>
+  <body>
+    <div class="support-form">
+      <h2>Форма поддержки</h2>
+      <form action="/submit_support" method="post">
+        <label for="full-name">Полное ФИО</label>
+        <input type="text" id="full-name" name="full_name" required />
+
+        <label for="city">Город проживания</label>
+        <select id="city" name="city" required>
+          <option value="">Выберите город</option>
+          <option value="Тель-Авив">Тель-Авив</option>
+          <option value="Иерусалим">Иерусалим</option>
+          <option value="Хайфа">Хайфа</option>
+          <option value="Ришон-ле-Цион">Ришон-ле-Цион</option>
+          <option value="Петах-Тиква">Петах-Тиква</option>
+          <option value="Нетания">Нетания</option>
+          <option value="Беэр-Шева">Беэр-Шева</option>
+          <option value="Ашдод">Ашдод</option>
+          <option value="Холон">Холон</option>
+          <option value="Бней-Брак">Бней-Брак</option>
+        </select>
+
+        <label for="message">Текст обращения</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.support-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Оптимизировано для мобильных */
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.support-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.support-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.support-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.support-form button:hover {
+  background-color: #45a049;
+}
+
+/* Адаптация для устройств с экраном меньше 600px */
+@media (max-width: 600px) {
+  body {
+    padding: 10px; /* Добавим отступы для мобильных устройств */
+  }
+
+  .support-form {
+    padding: 15px; /* Уменьшим внутренние отступы формы */
+  }
+
+  .support-form button {
+    padding: 12px; /* Чуть увеличим кнопку для удобства клика на мобильных */
+  }
+}
