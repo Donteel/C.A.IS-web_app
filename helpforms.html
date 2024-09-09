@@ -15,7 +15,7 @@
 
         <label for="city">Город проживания</label>
         <select id="city" name="city" required>
-          <option value="Выбрать город">Выбрать город</option>
+          <option value="None">Выбрать город</option>
           <option value="Арад">Арад</option>
           <option value="Ариэль">Ариэль</option>
           <option value="Акко">Акко</option>
@@ -82,8 +82,10 @@
           <option value="Ход-ха-Шарон">Ход-ха-Шарон</option>
           <option value="Холон">Холон</option>
           <option value="Явне">Явне</option>
-
         </select>
+
+        <label for="phone-number">Номер телефона (+972)</label>
+        <input type="tel" id="phone-number" name="phone_number" placeholder="+972" pattern="\+972[0-9]{8,9}" required />
 
         <label for="message">Текст обращения</label>
         <textarea id="message" name="message" rows="4" required></textarea>
